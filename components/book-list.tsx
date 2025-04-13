@@ -11,13 +11,14 @@ type Book = {
 }
 
 export default async function BookList({ id }: { id: string }) {
-  const response = await fetch(API_URL + id, { cache: "no-store" });
+  console.log(API_URL + id);
+  const response = await fetch(API_URL + id);
   const { results } = await response.json();
   const items = results.books;
 
   return (
     <div className={styles.gridContainer}>
-      {items.map((item: Book, index: number) => (
+      {items?.map((item: Book, index: number) => (
         <div key={index} className={styles.gridItem}>
           <img className={styles.img} src={item.book_image}></img>
           <div className={styles.info}>
@@ -26,11 +27,11 @@ export default async function BookList({ id }: { id: string }) {
           </div>
           {
             item.amazon_product_url ?
-              <button className={styles.button}>
-                <Link href={item.amazon_product_url} className={styles.link}>
+              <Link href={item.amazon_product_url} passHref>
+                <button className={styles.button}>
                   Buy now
-                </Link>
-              </button> : ""
+                </button>
+              </Link> : ""
           }
         </div>
       ))}
