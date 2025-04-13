@@ -1,0 +1,16 @@
+.h1 {
+    width: 80vw;
+    height: 10vh;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 20px 0 0 0;
+}
+
+.main {
+    width: 100vw;
+    max-height: 80vh;
+    min-height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
