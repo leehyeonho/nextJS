@@ -1,11 +1,10 @@
 import styles from "../../styles/home.module.css"
 import Topics from "../../components/topics";
+import { API_URL } from "../../src/constants/api";
 
 export const metadata = {
     title: "Home",
 };
-
-export const API_URL = "https://books-api.nomadcoders.workers.dev/lists";
 
 type Topic = {
     display_name: string,
