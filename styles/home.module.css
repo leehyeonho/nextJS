@@ -1,6 +1,7 @@
 .h1 {
     width: 80vw;
     height: 10vh;
+    line-height: 10vh;
     font-weight: bold;
     font-size: 1.3rem;
     padding: 20px 0 0 0;
@@ -8,13 +9,13 @@
 
 @media (max-width: 768px) {
     .h1 {
-        font-size: .65rem;
+        font-size: .4rem;
     }
 }
 
 @media (max-width: 384px) {
     .h1 {
-        font-size: .35rem;
+        font-size: .25rem;
     }
 }
 
