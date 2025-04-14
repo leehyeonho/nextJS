@@ -7,9 +7,18 @@
     border-radius: 8px;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .wrapper {
-        overflow-y: scroll;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .controls {
+        display: none;
+    }
+
+    .itemList {
+        transform: none !important;
     }
 }
 
@@ -24,7 +33,16 @@
     padding: 0 16px;
     border-bottom: 1px solid #ddd;
     font-size: 0.5rem;
-    user-select: none
+    user-select: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+    .item {
+        font-size: 0.3rem;
+    }
 }
 
 .controls {
