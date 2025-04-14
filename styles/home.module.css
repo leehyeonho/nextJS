@@ -6,6 +6,12 @@
     padding: 20px 0 0 0;
 }
 
+@media (max-width: 768px) {
+    .h1 {
+        font-size: .65rem;
+    }
+}
+
 .main {
     width: 100vw;
     max-height: 80vh;
